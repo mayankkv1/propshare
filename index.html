@@ -366,7 +366,7 @@ footer > div {
     }
 
     .card-right-top{
-        font-size: 8px;
+        font-size: 0.1em;
     }
 
     .row-item4{
@@ -378,7 +378,7 @@ footer > div {
     }
     
     .card-right-bottom {
-        font-size: 7px;
+        font-size: 0.2em;
     }
 
     .card-footer > div {
@@ -387,6 +387,10 @@ footer > div {
 
     .footer-block img {
         width: 20px;
+    }
+
+    footer > div {
+        font-size: 10px;
     }
 
     .footer-block .footer-block-right {
@@ -488,10 +492,10 @@ footer > div {
             <div class="col-xs-5">
                 <div class="row card-right-top">
                     <div class="col-xs-6 item2">
-                        <span class="rupee_icon">&#8377;</span> <b style="font-size:20px">{{x.carpet_area}}</b><br/> Per square feet 
+                        <span class="rupee_icon">&#8377;</span> <b style="font-size:16px">{{x.carpet_area}}</b><br/> Per square feet 
                     </div>
                     <div class="col-xs-6 item3">
-                        <b style="font-size:20px">{{x.total_area}}</b><br> Total square feet
+                        <b style="font-size:16px">{{x.total_area}}</b><br> Total square feet
                     </div>
                 </div>
                 <div class="row row-item4">
@@ -516,23 +520,23 @@ footer > div {
         </div>
         <div class="row card-footer">
             <div class="col-xs-4 item8 footer-block">
-                <div style=""><img src="images/icons/wallet-white.png"></div>
+                <div><img src="images/icons/wallet-white.png"></div>
                 
-                <div style="" class="footer-block-right">
+                <div class="footer-block-right">
                     Rental Yield<br><b>{{x.rental_yield}}%</b>
                 </div>
             </div>
             <div class="col-xs-4 item9 footer-block">
-                <div style=""><img src="images/icons/line-chart-white.png"></div>
+                <div><img src="images/icons/line-chart-white.png"></div>
                 
-                <div style="" class="footer-block-right">
+                <div class="footer-block-right">
                     Return Target<br> <b>{{x.return_target}}%</b>
                 </div>
             </div>
             <div class="col-xs-4 item10 footer-block">
-                <div style=""><img src="images/icons/coins-white.png"></div>
+                <div><img src="images/icons/coins-white.png"></div>
                 
-                <div style="" class="footer-block-right">
+                <div class="footer-block-right">
                     Mini Investment<br> <b>{{x.min_investment}}</b>
                 </div>
             </div>
