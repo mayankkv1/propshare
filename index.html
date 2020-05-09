@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title>Propshare</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="manifest" href="manifest.json"> 
+
+
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 1rem;
+            padding-bottom: 20px;
+        }
+
+                
+        .mobile-container {
+        /* max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 500px;
+        color: white;
+        border-radius: 10px; */
+        }
+
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+        }
+
+        .topnav #myLinks {
+        display: none;
+        position: fixed;
+        background-color: black;
+
+        z-index: 10;
+        }
+
+        .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        }
+
+        .topnav a.icon {
+        background: #2196f3;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        }
+
+        .topnav a.icon2 {
+        /* background: black; */
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        }
+        .topnav a:hover {
+        /* background-color: #ddd;
+        color: black; */
+        }
+
+        .active {
+            background-color: #2196F3;
+        color: white;
+        }
+        
+
+        .card {
+        /* grid-gap: 2px; */
+        /* padding: 10px; */
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        max-width: 770px;
+
+        }
+
+        .card-footer {
+        /* display: grid;
+        grid-template-areas:
+            'item8 item9 item10'; */
+
+        /* grid-gap: 10px; */
+        background-color: #2196F3;
+        /* padding: 10px; */
+
+        }
+        
+        .grid-container > div {
+        font-size: 30px;
+
+        }
+
+        .card-footer > div {
+            background-color: #2196F3;
+
+        color: rgba(255, 255, 255, 0.8);
+        /* text-align: center; */
+        font-size: x-large;
+        }
+
+        .item1 img{
+            border-top-left-radius: 10px;
+
+            width: 100%
+        }
+
+        .item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9,.item10{
+
+            padding: 1em;
+        }
+
+        .footer-block div{
+            display: inline-block;
+        }
+
+        .footer-block img{
+            width: 50px;
+            margin-top: -32px;
+        }
+
+        .footer-block .footer-block-right{
+            font-size: large;
+        }
+
+        .item-title{
+            font-weight: 600;
+
+        }
+
+        .location_icon,.rupee_icon{
+            color: #2196F3;
+        }
+        
+        .txt1,.txt2,.txt3{
+            font-weight: 600;
+            color: #2196F3;
+        }
+
+        .item2{
+            border-style: solid;
+  border-width: 0px 1px 1px 0px; /* 25px top, 10px right, 4px bottom and 35px left */
+  border-color: grey;
+
+        }
+
+        .item3{
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            border-style: solid;
+  border-width: 0px 0px 1px 0px; /* 25px top, 10px right, 4px bottom and 35px left */
+  border-color: grey;
+
+        }
+
+
+        .item5, .item6,.item7{
+
+            background-color: #dfe7ec;
+        }
+
+        .card-footer{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+
+        .card {
+  box-shadow: 0px 2px 8px 2px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card > div{
+    font-size: 30px;
+}
+
+
+.item1{
+    border-top-left-radius: 10px;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    /* height: 600px; */
+    margin: 0;
+    padding: 0px;
+    background-repeat: no-repeat;
+}
+
+.property_tag{
+                width: 150px;
+                height: 50px;
+                margin-top: 20px;
+                border-radius: 0px 10px 10px 0px;
+                font-size: large;
+                font-weight: 600;
+                line-height: 50px;
+                text-align: center;
+                border-style: dotted;
+                border-color: white;
+                color: white;
+            }                
+
+
+.item3{
+    border-top-right-radius: 10px;
+    color: grey;
+
+}
+
+.item8{
+    border-bottom-left-radius: 10px;
+}
+
+.item10{
+    border-bottom-right-radius: 10px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    display: grid;
+        grid-template-areas:
+            'item11 item12 item13 item14';
+            width: 100%;
+            z-index: 10;
+            background-color: #2196F3;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+}
+
+
+footer > div {
+        /* text-align: center; */
+        /* padding: 20px 0; */
+        font-size: 30px;
+
+        }
+
+        .item11,.item12,.item13,.item14{
+            border-right: 1px solid grey;
+        padding: 10px;
+
+        }
+
+        .item11{
+            background-color: #81ca81;
+        }
+
+    .flex-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flex-row > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-row.row:after, 
+    .flex-row.row:before {
+        display: flex;
+    }
+
+    .card-right-top{
+        font-size: medium;
+    }
+
+    .card-right-bottom{
+        font-size: small;
+    }
+
+
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+
+    <!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    
+      <a href="#home" class="active" style="margin-left:40px">Home</a>
+      <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      
+        <a href="javascript:void(0);" class="icon2">
+        <img src="images/icons/funnel-white.png" height="20" width="20"> 
+         
+
+    </a>
+    </div>
+    
+    
+    <!-- End smartphone / tablet look -->
+</div>
+
+    <div class="container card" ng-repeat="x in data track by $index">
+        <div class="row flex-row">
+            <div class="col-sm-7 item1" ng-style="{'background-image':'url({{x.image}})'}">
+                <!-- <img src="images/property.jpg"/> -->
+                <div class="property_tag" ng-style="{'background-color':x.badge=='Fully Funded'?'orange':'#81ca81'}">{{x.badge}}</div>
+            </div>
+            <div class="col-sm-5">
+                <div class="row card-right-top">
+                    <div class="col-sm-6 item2">
+                        <span class="rupee_icon">&#8377;</span> <b style="font-size:20px">{{x.carpet_area}}</b><br/> Per square feet 
+                    </div>
+                    <div class="col-sm-6 item3">
+                        <b style="font-size:20px">{{x.total_area}}</b><br> Total square feet
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 item4">
+                        <i class="fa fa-map-marker location_icon"></i> <span class="item-title">{{x.title}}</span><br>{{x.description}}
+                    </div>
+                </div>
+                <div class="row card-right-bottom">
+                    <div class="col-sm-4 item5">
+                        <span class="txt1">{{x.funded_percentage}}%</span><br> Funded
+                    </div>
+                    <div class="col-sm-4 item6">
+                        <span class="txt2">{{x.investors}}</span><br> Investors
+                    </div>
+                    <div class="col-sm-4 item7">
+                        <span class="txt3">{{x.days_to_go}}</span><br> Days To Go
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row card-footer">
+            <div class="col-sm-4 item8 footer-block">
+                <div style=""><img src="images/icons/wallet-white.png"></div>
+                
+                <div style="" class="footer-block-right">
+                    Rental Yield<br><b>{{x.rental_yield}}%</b>
+                </div>
+            </div>
+            <div class="col-sm-4 item9 footer-block">
+                <div style=""><img src="images/icons/line-chart-white.png"></div>
+                
+                <div style="" class="footer-block-right">
+                    Return Target<br> <b>{{x.return_target}}%</b>
+                </div>
+            </div>
+            <div class="col-sm-4 item10 footer-block">
+                <div style=""><img src="images/icons/coins-white.png"></div>
+                
+                <div style="" class="footer-block-right">
+                    Mini Investment<br> <b>{{x.min_investment}}</b>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="item11"><img src="images/icons/commercial-buildings-white.png" style="color: #FFFFFF;width:20px"><br>Commercial</div>
+        <div class="item12"><img src="images/icons/residential-white.png" style="color: #FFFFFF;width:20px"><br>Residential</div>
+        <div class="item13"><img src="images/icons/warehouse-white.png" style="color: #FFFFFF;width:20px"><br>Warehouse</div>
+        <div class="item14"><img src="images/icons/scroll-white.png" style="color: #FFFFFF;width:20px"><br>Alternative</div>
+    </footer>
+      
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope,$http) {
+            $http.get("api.php").then(function (response) {
+
+                $scope.data = response.data;
+            });
+        });
+    </script>
+        
+</body>
+</html>
